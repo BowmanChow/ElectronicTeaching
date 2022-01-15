@@ -61,6 +61,7 @@ jobs:
           SOURCE_FILE: PITCHME.md
         run: |
           git checkout $TARGET_BRANCH
+          git pull
           git checkout $SOURCE_BRANCH -- $SOURCE_FILE
           mv $SOURCE_FILE $TARGET_FILE
           git add $TARGET_FILE
