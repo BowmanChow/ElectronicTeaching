@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 title: Marp CLI example
 description: Hosting Marp slide deck on the web
 theme: uncover
@@ -21,6 +21,8 @@ paginate: true
     - [Verilog 基本语句](#verilog-基本语句)
     - [仿真](#仿真)
     - [综合](#综合)
+
+
 ---
 # 数字电路理论与设计入门
 
