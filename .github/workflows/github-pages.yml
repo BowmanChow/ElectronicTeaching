@@ -50,3 +50,19 @@ jobs:
           BRANCH: gh-pages
           FOLDER: dist
           target-folder: slides
+          git-config-name: BowmanChow
+          git-config-email: bowmanchow@gmail.com
+
+      - name: Copy
+        env:
+          TARGET_BRANCH: gh-pages
+          SOURCE_BRANCH: master
+          TARGET_FILE: index.md
+          SOURCE_FILE: PITCHME.md
+        run: |
+          git checkout $TARGET_BRANCH
+          git checkout $SOURCE_BRANCH -- $SOURCE_FILE
+          mv $SOURCE_FILE $TARGET_FILE
+          git add -A
+          git diff-index --quiet HEAD ||  git commit -am "copy md file"  # commit to the repository (ignore if no modification)
+          git push # push to remote branch
