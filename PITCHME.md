@@ -1,10 +1,16 @@
 ---
-marp: false
+marp: true
 title: Marp CLI example
 description: Hosting Marp slide deck on the web
 theme: uncover
 paginate: true
 ---
+<style>
+hr {
+    height: 0px;
+    border: none;
+}
+</style>
 ## 目录
 - [数字电路理论与设计入门](#数字电路理论与设计入门)
   - [布尔代数](#布尔代数)
@@ -53,6 +59,10 @@ paginate: true
 
 ### Verilog 基本概念
 
+模块
+
+端口
+
 ### Verilog 基本语句
 
 ```verilog
@@ -63,3 +73,4 @@ always
 ### 仿真
 
 ### 综合
+
